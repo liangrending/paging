@@ -1,0 +1,132 @@
+
+<html>
+	<head>
+		<meta charset = 'utf-8'>
+		<title></title>
+		<script type="text/javascript" src="paging.js"></script>
+		<link rel="stylesheet" type="text/css" href="paging.css">
+	</head>
+	<style type="text/css">
+		#test{
+			width:500px;
+			height:300px;
+		}
+	</style>
+	<body>
+		<div>
+		<div id="test">
+
+		</div>		
+		</div>
+	</body>
+	<script type="text/javascript">
+	var datas = [
+		{
+			first:"发生发射点发生富士康jfk时间",
+			second:"2",
+			third:"3",
+			four:"4",
+			five:"5"
+		},
+		{
+			first:"2017/6/4",
+			second:"7",
+			third:"8",
+			four:"9",
+			five:"10"
+		},
+		{
+			first:"11",
+			second:"12",
+			third:"13",
+			four:"14",
+			five:"15"
+		},
+		{
+			first:"16",
+			second:"17",
+			third:"18",
+			four:"19",
+			five:"20"
+		},
+		{
+			first:"21",
+			second:"22",
+			third:"23",
+			four:"24",
+			five:"25"
+		},
+		{
+			first:"26",
+			second:"27",
+			third:"28",
+			four:"29",
+			five:"30"
+		},
+		{
+			first:"31",
+			second:"32",
+			third:"33",
+			four:"34",
+			five:"35"
+		},
+		{
+			first:"36",
+			second:"37",
+			third:"38",
+			four:"39",
+			five:"40"
+		},
+		{
+			first:"41",
+			second:"42",
+			third:"43",
+			four:"44",
+			five:"45"
+		},
+		{
+			first:"46",
+			second:"47",
+			third:"48",
+			four:"49",
+			five:"50"
+		},
+		{
+			first:"51",
+			second:"52",
+			third:"53",
+			four:"54",
+			five:"55"
+		}
+		];
+
+	
+
+		var page = new paging();
+		page.config({
+			id: "test",
+			pageSize: 3,
+			dataSourse: datas,
+			
+/*			type: date 			money			text
+*/			column:[
+				{field:"first",fieldName:"第一",type:"date",width:"100",style:"text-align:right;"},
+				{field:"second",fieldName:"第二",type:"money",width:"50"},
+				{field:"third",fieldName:"第三",type:"date",width:"100"},
+				{field:"four",fieldName:"第四",type:"money",width:"100"},
+				{field:"five",fieldName:"第五",type:"money",width:"50"}
+			],
+			imgSrc: {
+                    last_gray: "last_gray.png",
+                    last_red: "last_red.png",
+                    next_gray: "next_gray.png",
+                    next_red: "next_red.png"
+                },
+			//非必需配置
+			titleFlag:true
+		});
+		page.templete(4,function(rowdata,rowIndex){
+			return "测试"+rowdata.five;
+		});
+	</script>
+</html>

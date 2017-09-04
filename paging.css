@@ -1,0 +1,44 @@
+.paging_contian{
+	position: relative;
+}
+.paging_contian .paging_table_class{
+	width:100%;
+	white-space: nowrap;
+	border-collapse: collapse;
+	color: black;
+}
+.paging_contian .paging_no_data_info{
+    width: 100px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    line-height: 200px; 
+    color: rgb(204,204,204);
+    font-size: 20px;
+}
+.paging_contian .paging_table_class tr{
+	border-bottom:1px solid rgb(204,204,204);
+	height:40px;
+}
+.paging_contian .paging_table_class .pagin_table_contain{
+	 text-overflow:ellipsis; 
+	 white-space:nowrap;
+	 overflow:hidden;
+}
+.paging_contian .paging_table_foot{
+	width:100%;
+	height:30px;
+	position: absolute;
+	bottom: 20px;
+}
+.paging_contian .paging_table_foot .paging_table_foot_contain{
+	width:50px;
+	margin:auto;
+	margin-top:10px;
+}
+.paging_contian .paging_table_foot .paging_table_foot_img{
+	display: inline-block;
+	width:20px;
+	height:20px;
+	cursor:pointer;
+}
